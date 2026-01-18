@@ -1,0 +1,32 @@
+<!DOCTYPE html> <html>
+    <head>
+        <title>
+            penggunaan id dalam  java script
+        </title>
+    </head>
+    <body>
+        <h2>
+            Penggunaan atribut id dalam bahasa pemrograman Java Script
+        </h2>
+        <p>Java script dapat mengakses elemen html dengan spesifik id menggunakan metode getElementById()</p>
+        
+        <h1 id="judul">
+            Hello World
+        </h1>
+        <button onclick="tampilan()">
+            click me
+        </button>
+        <button onclick="tampilan2()">
+            click me too
+        </button>
+        <script>
+            function tampilan(){
+                document.getElementById("judul").innerHTML = "halo aku henokh"
+
+            }
+            function tampilan2(){
+                document.getElementById("judul").innerHTML = "Hello world"
+            }
+        </script>
+    </body>
+</html>

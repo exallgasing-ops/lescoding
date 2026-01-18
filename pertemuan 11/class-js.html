@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        penggunaan class dalam java script
+    </title>
+</head>
+
+<body>
+    <h2>
+        penggunaan class dalam js
+    </h2>
+    <p>
+        klik tombol untuk menghilangkan dan menampilkan semua elemen dengan last name "class name city"
+    </p>
+    <button onclick="Hide()">
+        hide city
+    </button>
+    <button>
+        show city
+    </button>
+    <h2>
+        landen
+    </h2>
+    <p class="city">
+        landen adalah ibukota negara inggris
+    </p>
+    <h2 class="city">
+        paris
+    </h2>
+    <p>
+        paris adalah ibukota negara prancis
+    </p>
+    <h2 class="city">
+        tokyo
+    </h2>
+    <p>
+        tokyo adalah ibukota negara jepang
+    </p>
+    <script>
+        function Hide(){
+            var x = document.getElementsByClassName("city");
+            for(var i = 2; i < x.length; i++
+            ){
+                x[i].style.display = "none";
+            }
+
+        }
+    </script>
+</body>
+
+</html>
