@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        form html
+    </title>
+</head>
+
+<body>
+    <h2>
+        html forms
+    </h2>
+    <p>
+        html form digunakan untuk mengoleksi data yang di input kan oleh user.
+        biasanya input dari user dikirim ke server untuk di proses.
+        kita menggunakan
+        <b>
+            tag form
+        </b>
+        sebagai element html form untuk user menginputkan data
+    </p>
+    <form id="beda">
+        <label for="fname">
+            nama depan:
+        </label>
+        <br>
+        <input type="textarea" id="fname" name="fname">
+        <br>
+        <br>
+        <label for="lname">
+            nama belakang:
+        </label>
+        <br>
+        <input type="text" id="lname" name="lname">
+        <button type="submit">
+            Submit
+        </button>
+        
+    </form>
+    <p id="hasil">
+        
+    </p>
+    <script>
+        const form = document.getElementById("beda");
+        const hasil = document.getElementById("hasil");
+        form.addEventListener("submit", function(event){
+            event.preventDefault();
+            const fname = document.getElementById("fname").value;
+            const lname = document.getElementById("lname").value;
+            hasil.textContent = `Nama lengkap: ${fname} ${lname}`;
+
+        });
+    </script>
+</body>
+
+</html>

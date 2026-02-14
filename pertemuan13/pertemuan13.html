@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        form atribut
+    </title>
+</head>
+
+<body>
+    <h2>
+        form atribut
+    </h2>
+    <p>
+        kali ini kita akan mendefinisikan atribut dalam html pada elemen form
+
+    </p>
+    <ol>
+        <li>
+            action atribut
+
+        </li>
+        <p>
+            atribut action menentukan tindakan yang akan dilakukan saat form dikirimkan. Biasanya, data form akan
+            dikirimkan ke sebuah berkas di server ketika pengguna mengklik tombol submit.
+        </p>
+        <p>
+            contoh:
+        </p>
+
+        <form action="/pertemuan13/tes.html" target="_blank">
+            <label for="fname">
+                nama depan:
+            </label>
+            <input type="text" id="fname" name="fname" value="henokh"><br>
+            <label for="lname">
+                nama belakang:
+            </label>
+            <input type="text" id="lname" name="lname" value="axl">
+            <input type="submit" value="submit">
+        </form>
+        <li>
+            target atribut
+        </li>
+        <p>
+            atribut target menentukan dimana respons yang diterima setelah menguirimkan form akan ditampilkan.
+            atribut target dapat memeliki salah satu nilai berikut:
+        </p>
+        <table border="3">
+            <tr>
+                <th>
+                    value
+                </th>
+                <th>
+                    deskripsien
+                </th>
+
+            </tr>
+            <tr>
+                <td>
+                    _blank
+                </td>
+
+                <td>
+                    respons akan ditampilkan di jendela baru atau tab baru
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    _self
+                </td>
+                <td>
+                    respon ditampilkan di jendela saat ini
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    _parent
+                </td>
+                <td>
+                    respons ditampilkan di frame induk
+                </td>
+
+            </tr>
+            <tr>
+                <td>
+                    _top
+
+                </td>
+                <td>
+                    respons ditampilkan di seluruh badan jendela
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    framename
+                </td>
+                <td>
+                    respons ditampilkan di iframe yang bernama
+                </td>
+            </tr>
+
+        </table>
+        <p>
+            default value dari atribut target adalah _self yang artinya semua respon akan ditampilkan di jendela saat
+            ini
+        </p>
+        <li>
+            method atribut
+        </li>
+        <p>
+            atribut method menentukan metode HTTP yang digunakan saat mengirim data form.
+            data form dapat dikirimkan sebagai variabel URL (dengan method="get") atau sebagai transaksi http POST
+            (dengan method="post")
+            metode http default saat mengirimkan data form adalah get
+        </p>
+    </ol>
+
+</body>
+
+</html>
