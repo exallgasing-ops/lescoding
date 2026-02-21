@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        latihan form
+    </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px; 
+        }
+        form div {
+            margin-bottom:10px
+        }
+        .output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #f12
+        }
+    </style>
+</head>
+
+<body>
+    <h2>
+        html input type demo
+    </h2>
+    <form id="form">
+        <div>
+            <label for="text">
+                text:
+            </label>
+            <input type="text" name="text" id="text">
+        </div>
+        <div>
+            <label for="password">
+                password:
+            </label>
+            <input type="password" name="password" id="password">
+        </div>
+        <div>
+            <label for="email">
+                email:
+            </label>
+            <input type="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="number">
+                number:
+            </label>
+            <input type="number" name="number" id="number">
+        </div>
+        <div>
+            <label for="tel">
+                tel:
+            </label>
+            <input type="tel" name="tel" id="tel">
+        </div>
+        <div>
+            <label for="url">
+                url:
+            </label>
+            <input type="url" name="url" id="url">
+        </div>
+        <div>
+            <label for="date">
+                date:
+            </label>
+            <input type="date" name="date" id="date">
+        </div>
+        <div>
+            <label for="datetimelocal">
+                datetimelocal:
+            </label>
+            <input type="datetime-local" name="datetimelocal" id="datetimelocal">
+        </div>
+        <div>
+            <label for="gender">
+                gender:
+            </label>
+
+            <label>
+                <input type="radio" name="gender" id="gender" value="laki-laki">
+                laki laki </label>
+            <label>
+                <input type="radio" name="gender" id="gender" value="perempuan">
+                perempuan </label>
+        </div>
+        <div>
+            <label for="hobby">
+                hobby:
+            </label>
+            <label>
+                <input type="checkbox" name="hobby" id="hobby" value="coding">
+                coding </label>
+            <label>
+                <input type="checkbox" name="hobby" id="hobby" value="bersepeda">
+                bersepeda </label>
+            <label>
+                <input type="checkbox" name="hobby" id="hobby" value="membaca">
+                membaca </label>
+        </div>
+        <div>
+            <label for="country">
+                country:
+            </label>
+            <select name="country" id="country">
+                <option value="">
+                    select
+                </option>
+                <option value="indonesia">
+                    indonesia
+                </option>
+                <option value="malaysia">
+                    malaysia
+                </option>
+                <option value="singapore">
+                    singapure
+                </option>
+            </select>
+
+        </div>
+        <div>
+            <label for="message">
+                message:
+            </label>
+            <textarea name="message" id="message"></textarea>
+
+        </div>
+        <div>
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+
+        </div>
+    </form>
+    <div class="output" id="output">
+
+    </div>
+    <script>
+        document.getElementById("form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            let resultHTML = "<h3>Form Data:</h3><ul>";
+            for (let [key, value] of formData.entries()) {
+                resultHTML += `<li><strong>${key}</strong>: ${value}</li>`;
+
+            }
+            const checkboxes = document.querySelectorAll("input[name='hobby']:checked");
+            if (checkboxes.length > 0) {
+                let hobbies = [];
+                checkboxes.forEach(cb => hobbies.push(cb.value));
+                resultHTML += `<li><strong>hobby (all)</strong>: ${hobbies.join(",")}</li>`;
+            }
+            resultHTML += "</ul>";
+            document.getElementById("output").innerHTML = resultHTML;
+        });
+    </script>
+</body>
+
+</html>

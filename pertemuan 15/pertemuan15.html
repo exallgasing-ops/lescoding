@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        html input atribut
+    </title>
+</head>
+
+<body>
+    <h2>
+        HTML input atribut
+    </h2>
+    <p>
+        HTML input atribut adalah atribut yang digunakan untuk memberikan informasi tambahan pada elemen input dalam
+        HTML. Atribut ini dapat digunakan untuk mengatur perilaku, tampilan, dan validasi dari elemen input. Beberapa
+        contoh atribut yang umum digunakan pada elemen input adalah:
+    </p>
+    <ol>
+        <li>
+            <h3>
+                value atribut
+            </h3>
+            <p>
+                value atribut pada elemen input menentukan nilai awal utuk field input
+            </p>
+            <form>
+                <label for="fname">
+                    First name:
+
+                </label>
+                <input type="text" id="fname" value="john"><br>
+                <label for="lname">
+                    Last name:
+                </label>
+                <input type="text" id="lname"><br>
+                <input type="submit">
+            </form>
+        </li>
+        <li>
+            <h3>
+                atribut readonly
+            </h3>
+            <p>
+                Atribut readonly pada elemen input menentukan bahwa field input bersifat <b>hanya dibaca                </b> field input yang hanya bisa dibaca tidak diubah(namun pengguna masih bisa menavigasi, menyorot dan menyalin teks darinya).
+                Nilai dalam field imput yang bisa dibaca akan dikirim saat for nya di submit.
+            </p>
+            <form>
+                <label for="fname">
+                    First name:
+                </label>
+                <input type="text" id="fname"><br>
+                <label for="lname">
+                    Last name:
+                </label>
+                <input type="text" id="laname" value="riki" readonly><br>
+                <input type="submit">
+            </form>
+        </li>
+        <li>
+            <h3>
+                Disabled atribut
+            </h3>
+            <p>
+                atribut disabled pada elemen input menentukan bahwa field input harus di nonaktifkan.
+            </p>
+            <p>
+                field input yang dinonaktifkan tidak dapat digunakan dan tidak dapat di klik.Nilai dari field input yang dinonaktifkan tidak akan dikirim saat form di submit.
+            </p>
+            <form>
+                <label for="fname">
+                    first name:
+                </label>
+                <input type="text" id="fname" value="martin"><br>
+                <label for="lname">
+                    last name:
+                </label>
+                <input type="text" id="lname" value="riki" disabled><br>
+                <input type="submit">
+            </form>
+        </li>
+        <li>
+            <h3>
+                atribut required
+            </h3>
+            <p>
+                atribut required pada elemen input menentukan bahwa field input harus diisi sebelum form dapat disubmit.
+            </p>
+            <p>
+                atribut required berfungsi pada tipe input berikut: text,search,url,tel,email,password,date pickers,number,checkbox,radio,file
+            </p>
+        </li>
+    </ol>
+</body>
+
+</html>
